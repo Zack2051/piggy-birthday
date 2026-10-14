@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>生日快樂，小豬霈甄。</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="confetti" aria-hidden="true"></div>
+  <header class="masthead"><a href="#" aria-label="回到首頁">a little more love <span>♡</span></a><span>一份只送給妳的禮物</span></header>
+  <main>
+    <section id="intro" class="intro">
+      <div class="intro-copy">
+        <h1>誰的22歲生日?<br><span class="accent">小豬霈甄!。</span></h1>
+        <p class="lead">有些小事，妳可能已經忘記了。<br>但關於妳，我都有好好收著。</p>
+        <button id="start" class="primary">拆開我的心意 <span>↗</span></button>
+      </div>
+      <div class="art" aria-label="畫著生日蛋糕的手寫卡片">
+        <div class="orbit orbit-one">✳</div><div class="orbit orbit-two">♡</div>
+        <div class="photo-card"><div class="tape"></div>
+          <div class="cake-picture">
+            <svg viewBox="0 0 360 310" role="img" aria-label="草莓奶油生日蛋糕，點著一根蠟燭">
+              <path d="M40 253 Q180 224 320 253 Q330 275 180 283 Q35 278 40 253" fill="#ddd9c2"/>
+              <path d="M83 166 L83 237 Q180 273 277 237 L277 166" fill="#e9b3a7" stroke="#733b40" stroke-width="2"/>
+              <path d="M84 206 Q180 239 276 206" fill="none" stroke="#fff6df" stroke-width="13"/>
+              <ellipse cx="180" cy="165" rx="97" ry="31" fill="#fff9e7" stroke="#733b40" stroke-width="2"/>
+              <path d="M84 168 Q95 196 111 179 Q126 211 143 185 Q160 213 177 188 Q197 213 212 183 Q230 204 246 178 Q264 191 276 168" fill="#fff9e7" stroke="#733b40" stroke-width="2"/>
+              <g fill="#b33f50" stroke="#733b40" stroke-width="2"><path d="M110 150 Q91 121 113 119 Q139 120 121 151Z"/><path d="M239 149 Q220 120 242 118 Q267 121 250 150Z"/></g>
+              <g stroke="#637950" stroke-width="4" fill="none"><path d="M102 118 l13 5 13 -8 M230 118 l13 4 12 -8"/></g>
+              <path d="M174 94 h13 v66 q-7 5 -13 0Z" fill="#8a9b7b" stroke="#733b40" stroke-width="2"/>
+              <path d="M175 111 l11 -7 M175 131 l11 -7 M175 151 l11 -7" stroke="#fff9e7" stroke-width="4"/>
+              <path class="candle-flame" d="M181 90 C157 78 184 56 182 45 C203 68 198 83 181 90" fill="#db9c43"/>
+              <g fill="#b33f50"><path d="M70 84 C49 62 37 90 70 106 C103 90 91 62 70 84"/><path d="M282 68 C268 53 257 72 282 84 C305 73 295 53 282 68"/></g>
+              <g stroke="#9b8e68" stroke-width="2"><path d="M51 161 v16 M43 169 h16 M301 121 v16 M293 129 h16"/></g>
+            </svg>
+          </div>
+          <p>my favorite person, always.</p>
+        </div>
+        <div class="round-stamp">MADE WITH<br><span>♥</span><br>ALL MY LOVE</div>
+        <span class="scribble">今天的主角，是妳。</span>
+      </div>
+    </section>
+
+    <section id="journey" class="journey" hidden aria-labelledby="chapter-title">
+      <div class="journey-top"><button id="home" class="text-button">← 回到封面</button><span id="progress-label"></span></div>
+      <div class="progress" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div id="question-panel" class="panel">
+        <div id="chapter-icon" class="chapter-icon" aria-hidden="true"></div>
+        <h2 id="chapter-title" tabindex="-1"></h2>
+        <p id="question-description" class="muted"></p>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" role="status" class="feedback"></p>
+        <button id="hint" class="text-button">給我一點提示 ♡</button>
+      </div>
+      <div id="memory-panel" class="panel" hidden>
+        <h2 id="memory-heading" tabindex="-1">關於妳，我都有記得。</h2>
+        <button id="memory-card" class="memory-card" aria-expanded="false">
+          <span class="card-front"><span class="big-heart">♡</span><span>有一件小事，想讓妳知道。</span><small>輕點，翻開我的心意 ↗</small></span>
+          <span class="card-back" hidden><img id="memory-photo" alt="我們的回憶" hidden><strong id="memory-title"></strong><span id="memory-text"></span></span>
+        </button>
+        <button id="next" class="primary" hidden>把這份心意收好 →</button>
+      </div>
+    </section>
+
+    <section id="complete" class="completion" hidden aria-labelledby="complete-title">
+      <div class="completion-art" aria-hidden="true">
+        <span class="completion-ring"></span>
+        <span class="completion-star star-left">✧</span>
+        <span class="completion-star star-right">✦</span>
+        <div class="love-medal"><span>♥</span><i>✓</i></div>
+        <div class="delivery-gift"><span class="delivery-bow">୨୧</span><span class="delivery-ribbon"></span><span class="delivery-heart">♡</span></div>
+      </div>
+      <h2 id="complete-title" tabindex="-1">恭喜小豬，全部過關！</h2>
+      <p class="completion-note">我們的回憶，妳都有好好收著呢。<br>接下來，換妳收下我的心意。</p>
+      <button id="accept-gift" class="primary">收下你的心意 ♡</button>
+      <p id="accept-status" class="accept-status" role="status"></p>
+    </section>
+
+    <section id="ending" class="ending" hidden>
+      <h2 id="ending-title" tabindex="-1">生日快樂，<span id="birthday-name"></span>。</h2>
+      <section id="gift" class="gift-section" aria-label="生日禮物">
+        <div id="gift-stage" class="gift-stage">
+          <span class="gift-halo" aria-hidden="true"></span>
+          <div id="gift-reveal" class="gift-reveal" hidden>
+            <div class="instant-camera" role="img" aria-label="奶油色拍立得示意插畫">
+              <svg viewBox="0 0 300 250" aria-hidden="true">
+                <rect x="39" y="32" width="222" height="192" rx="40" fill="#d4c6ae"/>
+                <rect x="32" y="25" width="236" height="188" rx="40" fill="#f5e8d0" stroke="#857565" stroke-width="3"/>
+                <path d="M33 130 H267 V174 Q267 212 229 212 H71 Q33 212 33 174Z" fill="#e5d5b9"/>
+                <rect x="57" y="48" width="53" height="32" rx="7" fill="#bdb7a6" stroke="#857565" stroke-width="2"/>
+                <path d="M64 53 v22 M73 53 v22 M82 53 v22 M91 53 v22 M100 53 v22" stroke="#fff9e7" stroke-width="3"/>
+                <rect x="209" y="48" width="32" height="27" rx="7" fill="#716b60"/>
+                <rect x="216" y="54" width="18" height="14" rx="3" fill="#a9bfc0"/>
+                <circle cx="160" cy="123" r="56" fill="#c2b394" stroke="#857565" stroke-width="3"/>
+                <circle cx="160" cy="123" r="44" fill="#514d47" stroke="#faf0dc" stroke-width="5"/>
+                <circle cx="160" cy="123" r="29" fill="#303f40"/>
+                <circle cx="160" cy="123" r="18" fill="#1d2b30"/>
+                <ellipse cx="149" cy="111" rx="9" ry="6" fill="#d4e7df" opacity=".6" transform="rotate(-35 149 111)"/>
+                <circle cx="69" cy="111" r="14" fill="#b55e69" stroke="#91505a" stroke-width="2"/>
+                <circle cx="191" cy="49" r="4" fill="#a53e4d"/>
+                <rect x="89" y="186" width="130" height="9" rx="4" fill="#6f6557"/>
+                <path d="M242 91 v76" stroke="#cbbb9e" stroke-width="6" stroke-linecap="round"/>
+                <text x="81" y="151" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#857565">♡</text>
+              </svg>
+            </div>
+            <div class="printed-photo"><div class="pig-picture" aria-hidden="true"><span>🐷</span><i>♡</i></div><p id="gift-message"></p></div>
+          </div>
+          <button id="open-gift" class="gift-box" aria-label="打開生日禮物盒" aria-expanded="false" aria-controls="gift-reveal gift-caption">
+            <span class="box-lid"><span class="bow bow-left"></span><span class="bow bow-right"></span></span>
+            <span class="box-body"><span class="box-tag">FOR YOU ♡</span></span>
+          </button>
+          <span class="gift-spark spark-one" aria-hidden="true">✦</span><span class="gift-spark spark-two" aria-hidden="true">✧</span>
+        </div>
+        <p id="gift-instruction" class="muted">輕點禮物盒，拆開今天的小驚喜。</p>
+        <div id="gift-caption" hidden aria-live="polite"><h3 id="gift-name"></h3><p id="gift-text" class="muted"></p><a class="letter-link" href="#birthday-letter">還有一些話，想寫給妳 ↓</a></div>
+      </section>
+      <article id="birthday-letter" class="letter" aria-label="給妳的生日信">
+        <div class="letter-postage" aria-hidden="true">
+          <span class="postmark">寄給<br>最喜歡的妳</span>
+          <span class="postage-lines"></span>
+          <span class="heart-stamp">♡</span>
+        </div>
+        <div class="letter-sheet">
+          <p id="salutation" class="salutation"></p>
+          <div id="letter-body"></div>
+          <p id="signature" class="signature"></p>
+        </div>
+        <span class="letter-seal" aria-hidden="true">♥</span>
+      </article>
+      <button id="wish" class="primary">許好願了，收下祝福 ✦</button>
+      <p id="wish-message" class="wish-message" role="status"></p>
+      <button id="restart" class="text-button">從頭再看一次 ↺</button>
+    </section>
+  </main>
+  <noscript>請開啟瀏覽器的 JavaScript，才能拆開這份互動生日禮物。</noscript>
+</body>
+</html>
